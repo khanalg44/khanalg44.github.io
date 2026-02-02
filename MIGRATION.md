@@ -66,6 +66,23 @@ package.json     # Root package for development scripts
 - Implemented proxy configuration for API calls during development
 - Added build and deployment scripts
 
+## Content Updates (Post-Migration)
+
+### Home Page
+- Updated with personal professional bio
+- Added details about current role as Quantitative Analyst at Citigroup, NYC
+- Included PhD background in physics and quantum materials research
+- Added link to PhD work tutorial on phonons
+- Highlighted passions for cricket data analysis and finance
+
+### Quantum Computing Page
+- Replaced generic description with personal quantum computing journey
+- Added details about learning since grad school and IBM participation
+- Updated "Topics of Interest" to focus on:
+  - Quantum algorithms
+  - Quantum machine learning
+- Removed less relevant topics (cryptography, hardware)
+
 ## Benefits
 - **Performance**: Client-side rendering for faster navigation
 - **Maintainability**: Component-based architecture

@@ -4,14 +4,12 @@ const Quantum = () => {
   return (
     <section className="section-content">
       <h2>Quantum Computing</h2>
-      <p>Exploring the fascinating world of quantum computing, algorithms, and their potential applications in various fields.</p>
+      <p>I like to call myself a Quantum Computing enthusiast and have been learning it ever since my grad school. I have participated in numerous challenges and summer schools organized mainly by IBM. I will share my Quantum journey and what I am up to these days!</p>
       <div style={{ marginTop: '2rem' }}>
         <h3>Topics of Interest</h3>
         <ul>
           <li>Quantum algorithms</li>
-          <li>Quantum cryptography</li>
           <li>Quantum machine learning</li>
-          <li>Hardware developments</li>
         </ul>
       </div>
     </section>
