@@ -6,10 +6,6 @@ app = Flask(__name__)
 def home():
     return render_template('home.html', title='Home')
 
-@app.route('/work')
-def work():
-    return render_template('work.html', title='Work')
-
 @app.route('/cricket')
 def cricket():
     return render_template('cricket.html', title='Cricket')

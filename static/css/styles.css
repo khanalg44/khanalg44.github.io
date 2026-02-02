@@ -70,6 +70,25 @@ nav {
     width: 100%;
 }
 
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 /* Main Layout */
 main {
     max-width: 1000px; /* Wider for portfolio feel */
@@ -129,7 +148,7 @@ p {
 
 /* Footer */
 footer {
-    text-align: left;
+    text-align: center;
     padding: var(--spacing-unit);
     max-width: 1200px;
     margin: 0 auto;
