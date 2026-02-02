@@ -1,61 +1,88 @@
-# Personal Portfolio Website
+# Personal Portfolio - React & Node.js
 
-A modern, responsive personal portfolio website built with Flask.
+A modern, responsive personal portfolio website built with React frontend and Node.js/Express backend.
 
 ## Features
 
 - **Home Page**: Introduction and overview
 - **Cricket Page**: Cricket-related content
 - **Quantum Computing Page**: Technical content about quantum computing
-- **Contact Page**: Contact form and social media links
-- **Responsive Design**: Clean, modern UI with CSS styling
-- **Social Integration**: LinkedIn and GitHub links on contact page
+- **Contact Page**: Contact form and social media links (LinkedIn & GitHub)
+- **Responsive Design**: Clean, modern UI with React components
+- **RESTful API**: Node.js backend with Express
+- **Client-side Routing**: React Router for navigation
 
 ## Tech Stack
 
-- **Backend**: Python Flask
-- **Frontend**: HTML, CSS
-- **Styling**: Custom CSS with modern design principles
+- **Frontend**: React 18, React Router, CSS
+- **Backend**: Node.js, Express.js
+- **Development**: Concurrently for running both client and server
 
 ## Installation
 
 1. Clone the repository
-2. Create a virtual environment:
+2. Install all dependencies:
    ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   npm run install-all
    ```
-3. Install dependencies:
+   Or install client and server separately:
    ```bash
-   pip install -r requirements.txt
+   npm run install-client
+   npm run install-server
    ```
-4. Run the application:
+
+## Development
+
+Run both client and server concurrently:
+```bash
+npm run dev
+```
+
+This will start:
+- React development server on `http://localhost:3000` (access your app here)
+- Node.js server on `http://localhost:3002` (API server)
+
+**Important**: Access your React app at `http://localhost:3000`, not the API server port.
+
+1. Build the React app:
    ```bash
-   python app.py
+   npm run build
    ```
-5. Open your browser to `http://127.0.0.1:5050`
+2. Start the production server:
+   ```bash
+   npm start
+   ```
+
+The production server will serve the built React app and handle API requests.
 
 ## Project Structure
 
 ```
-personal_web_page/
-├── app.py                 # Main Flask application
-├── requirements.txt       # Python dependencies
-├── static/
-│   └── css/
-│       └── styles.css     # Main stylesheet
-├── templates/
-│   ├── base.html          # Base template with header/footer
-│   ├── home.html          # Home page
-│   ├── cricket.html       # Cricket page
-│   ├── quantum.html       # Quantum computing page
-│   └── contact.html       # Contact page
+personal-portfolio/
+├── client/                 # React frontend
+│   ├── public/
+│   │   └── index.html
+│   └── src/
+│       ├── components/
+│       │   ├── Header.js
+│       │   └── Footer.js
+│       ├── pages/
+│       │   ├── Home.js
+│       │   ├── Cricket.js
+│       │   ├── Quantum.js
+│       │   └── Contact.js
+│       ├── App.js
+│       └── index.js
+├── server/                 # Node.js backend
+│   └── server.js
+├── package.json           # Root package.json for scripts
 └── README.md             # This file
 ```
 
-## Development
+## API Endpoints
 
-The application runs in debug mode by default. Make changes to the templates or CSS and the server will automatically reload.
+- `GET /api/health` - Health check
+- `POST /api/contact` - Handle contact form submissions
 
 ## Author
 
