@@ -74,6 +74,7 @@ package.json     # Root package for development scripts
 - Included PhD background in physics and quantum materials research
 - Added link to PhD work tutorial on phonons
 - Highlighted passions for cricket data analysis and finance
+- Updated main heading to focus on quantitative analysis background and key interests
 
 ### Quantum Computing Page
 - Replaced generic description with personal quantum computing journey
