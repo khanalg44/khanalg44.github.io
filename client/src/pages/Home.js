@@ -6,11 +6,13 @@ const Home = () => {
     <section className="section-content">
       <div className="home-container">
         <div className="home-text">
-          <h2>I am a quantitative analyst interested in quantum computing and cricket data analysis.</h2>
-          <p>I am a quantitative analyst (quant) currently working at Citigroup, NYC. I hold a PhD in physics where I developed numerical libraries to study the fascinating world of quantum materials. Not only our tool explained the complicated physical properties of real materials, our tool was also shown to have a robust predictive ability. Learn more about my PhD Work <a href="http://hauleweb.rutgers.edu/tutorials/Tutorial_phonons.html" target="_blank" rel="noopener noreferrer">here</a>. I am passionate about cricket data analysis and learning about the world of finance through an economic lens around the world.</p>
+          <h2>Hi there,</h2>
+          <p>I am a quantitative analyst currently working at Citigroup in New York City, where I build libraries for pricing, quantitative risk analysis, and stress testing. I hold a PhD in Physics, where I developed numerical libraries to study quantum materials and their properties. I am passionate about cricket data analysis, quantum computing, and understanding global financial markets through an economic lens.</p>
+          
+          <p style={{ marginTop: '2rem' }}>Feel free to connect with me on <a href="https://www.linkedin.com/in/ghanashyam-khanal/" target="_blank" rel="noopener noreferrer">LinkedIn</a> or check out my projects on <a href="https://github.com/khanalg44/" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
         </div>
         <div className="home-image">
-          <img src="/images/profilepic1.jpg" alt="Ghanashyam Khanal" className="profile-pic" />
+          <img src="/images/profilepic4.jpg" alt="Ghanashyam Khanal" className="profile-pic" />
         </div>
       </div>
     </section>
