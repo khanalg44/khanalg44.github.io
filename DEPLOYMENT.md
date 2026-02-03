@@ -31,7 +31,7 @@ This will automatically:
 
 3. Wait 1-2 minutes for GitHub to build and deploy
 
-4. Visit your site: https://khanalg44.github.io
+4. Visit your site: https://ghanashyamkhanal.com (or https://khanalg44.github.io)
 
 ### 3. Verify Deployment
 Check that the `gh-pages` branch was updated:
@@ -85,4 +85,23 @@ git push origin dev
 - Never manually edit files in the `gh-pages` branch
 
 ## Site URL
-Your deployed site: **https://khanalg44.github.io**
+Your deployed site: **https://ghanashyamkhanal.com**
+
+## Custom Domain Configuration
+
+Your site is configured to use the custom domain `ghanashyamkhanal.com`. 
+
+### DNS Configuration (Already Done)
+Make sure your DNS provider has these records:
+- **A Records** pointing to GitHub Pages IPs:
+  - 185.199.108.153
+  - 185.199.109.153
+  - 185.199.110.153
+  - 185.199.111.153
+- **CNAME Record** (optional): `www` pointing to `khanalg44.github.io`
+
+### GitHub Settings
+In your repository settings (https://github.com/khanalg44/khanalg44.github.io/settings/pages):
+1. Under "Custom domain", enter: `ghanashyamkhanal.com`
+2. Check "Enforce HTTPS" (after DNS propagates)
+3. The CNAME file will be automatically preserved during deployments

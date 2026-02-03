@@ -19,7 +19,7 @@ npm run deploy
 # Step 3: Check deployment status
 if [ $? -eq 0 ]; then
     echo "✅ Deployment successful!"
-    echo "📍 Your site will be available at: https://khanalg44.github.io"
+    echo "📍 Your site will be available at: https://ghanashyamkhanal.com"
     echo "⏳ Note: It may take a few minutes for changes to appear."
     echo ""
     echo "⚠️  IMPORTANT: Make sure GitHub Pages is configured correctly:"
