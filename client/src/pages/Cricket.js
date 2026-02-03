@@ -4,11 +4,7 @@ const Cricket = () => {
   return (
     <section className="section-content">
       <h2>Cricket</h2>
-      <p>My passion for cricket and sports analytics. Here I share insights about the game, statistics, and my experiences.</p>
-      <div style={{ marginTop: '2rem' }}>
-        <h3>Recent Thoughts</h3>
-        <p>Content about cricket will be added here...</p>
-      </div>
+      <p>My passion for cricket extends beyond watching the game to analyzing player performance, match strategies, and statistical trends. This section will feature detailed cricket analysis articles exploring various aspects of the sport through a data-driven lens.</p>
     </section>
   );
 };
