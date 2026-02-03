@@ -93,15 +93,15 @@ app.post('/api/contact', apiLimiter, (req, res) => {
     });
   }
 
-  // Sanitize inputs to prevent XSS
-  const sanitizedName = validator.escape(name.trim());
-  const sanitizedEmail = validator.normalizeEmail(email);
-  const sanitizedMessage = validator.escape(message.trim());
+  // Normalize inputs; apply HTML encoding only when rendering into HTML
+  const normalizedName = name.trim();
+  const normalizedEmail = validator.normalizeEmail(email);
+  const normalizedMessage = message.trim();
 
   console.log('Contact form submission:', { 
-    name: sanitizedName, 
-    email: sanitizedEmail, 
-    message: sanitizedMessage 
+    name: normalizedName, 
+    email: normalizedEmail, 
+    message: normalizedMessage 
   });
 
   // TODO: In production, implement actual email sending
