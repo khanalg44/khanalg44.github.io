@@ -14,6 +14,8 @@ app.use(helmet({
   contentSecurityPolicy: {
     directives: {
       defaultSrc: ["'self'"],
+      // 'unsafe-inline' is currently required to support existing React/CSS-in-JS inline styles.
+      // TODO: Migrate to a nonce- or hash-based CSP for styles and then remove 'unsafe-inline'.
       styleSrc: ["'self'", "'unsafe-inline'"],
       scriptSrc: ["'self'"],
       imgSrc: ["'self'", "data:", "https:"],
