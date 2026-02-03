@@ -1,14 +1,51 @@
 # Deployment Instructions for GitHub Pages
 
-## Quick Deploy
+## Deployment Workflow
+
+**IMPORTANT:** Deployments to GitHub Pages only happen from the `master` branch.
+
+### From Development Branch (e.g., `dev`)
+
+1. **Make your changes** in the development branch
+   ```bash
+   git checkout dev
+   # Make your changes
+   git add .
+   git commit -m "Your changes"
+   git push origin dev
+   ```
+
+2. **Create a Pull Request** on GitHub
+   - Go to: https://github.com/khanalg44/khanalg44.github.io/compare
+   - Base: `master` ← Compare: `dev`
+   - Review changes and create PR
+
+3. **Review and Merge** the PR into master
+
+4. **Deploy from master**
+   ```bash
+   git checkout master
+   git pull origin master
+   ./deploy.sh
+   ```
+
+## Quick Deploy (from master branch only)
 Run the deployment script:
 ```bash
 ./deploy.sh
 ```
 
+The script will automatically check that you're on the `master` branch before deploying.
+
 ## Manual Deployment Steps
 
-### 1. Build and Deploy
+### 1. Ensure You're on Master Branch
+```bash
+git checkout master
+git pull origin master
+```
+
+### 2. Build and Deploy
 From the project root, run:
 ```bash
 npm run deploy
@@ -64,17 +101,24 @@ npm run deploy
 After making changes to your React app:
 
 ```bash
-# 1. Make your changes in the code
+# 1. Make your changes in the dev branch
+git checkout dev
+# ... make changes ...
+
 # 2. Test locally
 npm run dev
 
-# 3. Deploy to GitHub Pages
-npm run deploy
-
-# 4. (Optional) Commit your source code changes
+# 3. Commit and push to dev
 git add .
 git commit -m "Update content"
 git push origin dev
+
+# 4. Create PR on GitHub to merge dev → master
+
+# 5. After PR is merged, deploy from master
+git checkout master
+git pull origin master
+./deploy.sh
 ```
 
 ## Important Notes

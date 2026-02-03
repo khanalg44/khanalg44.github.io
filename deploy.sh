@@ -2,8 +2,28 @@
 
 # Deployment Script for GitHub Pages
 # This script deploys the React app to GitHub Pages
+# Only deploys from the master branch
 
 echo "🚀 Starting deployment to GitHub Pages..."
+
+# Step 0: Check if we're on the master branch
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+if [ "$CURRENT_BRANCH" != "master" ]; then
+    echo "❌ Error: Deployment can only be done from the master branch!"
+    echo "📍 Current branch: $CURRENT_BRANCH"
+    echo ""
+    echo "📋 Deployment Workflow:"
+    echo "   1. Create a Pull Request to merge '$CURRENT_BRANCH' into 'master'"
+    echo "   2. Review and merge the PR"
+    echo "   3. Switch to master: git checkout master"
+    echo "   4. Pull latest changes: git pull origin master"
+    echo "   5. Run deployment: ./deploy.sh"
+    echo ""
+    exit 1
+fi
+
+echo "✅ Branch check passed: deploying from master"
+echo ""
 
 # Step 1: Install dependencies if needed
 echo "📦 Checking dependencies..."
