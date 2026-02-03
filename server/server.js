@@ -70,18 +70,18 @@ app.post('/api/contact', apiLimiter, (req, res) => {
     });
   }
 
-  // Normalize inputs first
-  const normalizedName = name.trim();
-  const normalizedEmail = validator.normalizeEmail(email);
-  const normalizedMessage = message.trim();
-
-  // Validate email format
+  // Validate email format first
   if (!validator.isEmail(email)) {
     return res.status(400).json({ 
       success: false, 
       message: 'Invalid email address' 
     });
   }
+
+  // Normalize inputs after validation
+  const normalizedName = name.trim();
+  const normalizedEmail = validator.normalizeEmail(email);
+  const normalizedMessage = message.trim();
 
   // Validate field lengths on trimmed values
   if (normalizedName.length < 2 || normalizedName.length > 100) {
