@@ -1,0 +1,41 @@
+.home-container {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.home-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.home-image {
+  flex: 0 0 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(91, 163, 208, 0.3);
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column-reverse;
+  }
+  
+  .home-image {
+    flex: 0 0 auto;
+  }
+  
+  .profile-pic {
+    max-width: 250px;
+  }
+}
