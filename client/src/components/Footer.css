@@ -1,9 +1,9 @@
 footer {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #5BA3D0 0%, #3B7EA1 100%);
   border-top: none;
   padding: 2rem 0;
   margin-top: auto;
-  box-shadow: 0 -2px 10px rgba(102, 126, 234, 0.1);
+  box-shadow: 0 -2px 10px rgba(91, 163, 208, 0.15);
 }
 
 .footer-content {
