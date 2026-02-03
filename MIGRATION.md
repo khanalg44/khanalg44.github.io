@@ -69,35 +69,57 @@ package.json     # Root package for development scripts
 ## Content Updates (Post-Migration)
 
 ### Home Page
-- Updated with personal professional bio
-- Added details about current role as Quantitative Analyst at Citigroup, NYC
-- Included PhD background in physics and quantum materials research
-- Added link to PhD work tutorial on phonons
-- Highlighted passions for cricket data analysis and finance
-- Updated main heading to focus on quantitative analysis background and key interests
+- Updated with professional bio highlighting quantitative analyst role at Citigroup, NYC
+- Added details about building pricing and risk analysis libraries
+- Included PhD background in Physics with focus on quantum materials research
+- Integrated profile picture with circular styling
+- Added LinkedIn and GitHub social links
+- Streamlined heading to "Hi there,"
 
-### Quantum Computing Page
-- Replaced generic description with personal quantum computing journey
-- Added details about learning since grad school and IBM participation
-- Updated "Topics of Interest" to focus on:
-  - Quantum algorithms
-  - Quantum machine learning
-- Removed less relevant topics (cryptography, hardware)
+### Cricket Page
+- Updated to focus on data-driven cricket analysis
+- Emphasized statistical trends and player performance analysis
+- Simplified to single professional paragraph
+
+### Contact Page
+- Removed as standalone page
+- Integrated social links (LinkedIn, GitHub) into home page
+- Simplified navigation to Home and Cricket only
+
+## Design Evolution
+
+### Initial Design (White Background)
+- Clean white background
+- Standard link colors
+- Traditional navigation
+
+### Current Design (Dark Space Theme)
+- Inspired by Stellar HTML5 template
+- Dark space-themed background (#2d3142) with subtle dot pattern
+- Light blue accent color (#8cc9f0) for links and highlights
+- Circular profile picture with elegant border styling
+- Mobile-responsive with adaptive layouts
+- Lighter font weights (300) for modern aesthetic
+- Transparent header/footer with subtle borders
 
 ## Benefits
 - **Performance**: Client-side rendering for faster navigation
 - **Maintainability**: Component-based architecture
 - **Scalability**: Separate frontend and backend concerns
 - **Modern Stack**: Up-to-date technologies and best practices
+- **Deployment**: GitHub Pages integration with custom domain
 
 ## Deployment
 The application now supports:
 - Development mode with hot reloading
 - Production builds with static file serving
 - Environment-based configuration
+- GitHub Pages deployment via gh-pages package
+- Custom domain support (ghanashyamkhanal.com)
+- Automated deployment from master branch only
 
 ## Next Steps
-- Implement proper contact form handling (email service)
-- Add database integration if needed
-- Consider adding testing frameworks
-- Optimize bundle sizes and performance
+- Deploy to GitHub Pages with custom domain
+- Add cricket analysis articles
+- Consider adding blog functionality
+- Optimize performance and SEO
