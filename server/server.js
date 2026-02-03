@@ -72,33 +72,33 @@ app.post('/api/contact', apiLimiter, (req, res) => {
     });
   }
 
+  // Normalize inputs first
+  const normalizedName = name.trim();
+  const normalizedEmail = validator.normalizeEmail(email);
+  const normalizedMessage = message.trim();
+
   // Validate email format
-  if (!validator.isEmail(email)) {
+  if (!validator.isEmail(normalizedEmail)) {
     return res.status(400).json({ 
       success: false, 
       message: 'Invalid email address' 
     });
   }
 
-  // Validate field lengths
-  if (name.length < 2 || name.length > 100) {
+  // Validate field lengths on trimmed values
+  if (normalizedName.length < 2 || normalizedName.length > 100) {
     return res.status(400).json({ 
       success: false, 
       message: 'Name must be between 2 and 100 characters' 
     });
   }
 
-  if (message.length < 10 || message.length > 1000) {
+  if (normalizedMessage.length < 10 || normalizedMessage.length > 1000) {
     return res.status(400).json({ 
       success: false, 
       message: 'Message must be between 10 and 1000 characters' 
     });
   }
-
-  // Normalize inputs; apply HTML encoding only when rendering into HTML
-  const normalizedName = name.trim();
-  const normalizedEmail = validator.normalizeEmail(email);
-  const normalizedMessage = message.trim();
 
   console.log('Contact form submission:', { 
     name: normalizedName, 
