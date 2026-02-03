@@ -1,30 +1,31 @@
 # Personal Portfolio - React & Node.js
 
-A modern, responsive personal portfolio website built with React frontend and Node.js/Express backend.
+A modern, responsive personal portfolio website built with React frontend and Node.js/Express backend, featuring a dark space-themed design.
 
 ## Features
 
-- **Home Page**: Introduction and overview
-- **Cricket Page**: Cricket-related content
-- **Quantum Computing Page**: Technical content about quantum computing
-- **Contact Page**: Contact form and social media links (LinkedIn & GitHub)
-- **Responsive Design**: Clean, modern UI with React components
-- **RESTful API**: Node.js backend with Express
+- **Home Page**: Professional introduction with profile picture and social links
+- **Cricket Page**: Cricket data analysis content
+- **Responsive Design**: Mobile-friendly with dark modern UI inspired by Stellar template
 - **Client-side Routing**: React Router for navigation
+- **GitHub Pages Deployment**: Automated deployment with custom domain support
 
 ## Tech Stack
 
 - **Frontend**: React 18, React Router, CSS
 - **Backend**: Node.js, Express.js
+- **Deployment**: GitHub Pages with custom domain (ghanashyamkhanal.com)
 - **Development**: Concurrently for running both client and server
 
 ## Installation
 
 1. Clone the repository
 2. Install all dependencies:
+
    ```bash
    npm run install-all
    ```
+
    Or install client and server separately:
    ```bash
    npm run install-client
@@ -34,11 +35,13 @@ A modern, responsive personal portfolio website built with React frontend and No
 ## Development
 
 Run both client and server concurrently:
+
 ```bash
 npm run dev
 ```
 
 This will start:
+
 - React development server on `http://localhost:3000` (access your app here)
 - Node.js server on `http://localhost:3002` (API server)
 
@@ -55,38 +58,58 @@ This will start:
 
 The production server will serve the built React app and handle API requests.
 
+## Deployment
+
+Deploy to GitHub Pages:
+
+```bash
+./deploy.sh
+```
+
+**Note**: Deployment must be done from the `master` branch. See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions.
+
 ## Project Structure
 
 ```
 personal-portfolio/
 ├── client/                 # React frontend
 │   ├── public/
+│   │   ├── images/         # Profile pictures
+│   │   ├── CNAME           # Custom domain
 │   │   └── index.html
 │   └── src/
 │       ├── components/
 │       │   ├── Header.js
-│       │   └── Footer.js
+│       │   ├── Header.css
+│       │   ├── Footer.js
+│       │   └── Footer.css
 │       ├── pages/
 │       │   ├── Home.js
+│       │   ├── Home.css
 │       │   ├── Cricket.js
-│       │   ├── Quantum.js
-│       │   └── Contact.js
+│       │   └── Contact.js (deprecated)
 │       ├── App.js
+│       ├── App.css
 │       └── index.js
 ├── server/                 # Node.js backend
 │   └── server.js
+├── deploy.sh              # GitHub Pages deployment script
 ├── package.json           # Root package.json for scripts
 └── README.md             # This file
 ```
 
-## API Endpoints
+## Design
 
-- `GET /api/health` - Health check
-- `POST /api/contact` - Handle contact form submissions
+The site features a modern dark theme inspired by the Stellar template:
+- Dark space-themed background with subtle dot pattern
+- Light blue accent color (#8cc9f0)
+- Circular profile picture with elegant styling
+- Mobile-responsive layout
+- Clean typography with light font weights
 
 ## Author
 
-Ghanashyam Khanal
+Ghanashyam Khanal - Quantitative Analyst at Citigroup, NYC
 
 ## License
 

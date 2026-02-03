@@ -4,7 +4,6 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Cricket from './pages/Cricket';
-import Quantum from './pages/Quantum';
 import Contact from './pages/Contact';
 import './App.css';
 
@@ -17,7 +16,6 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/cricket" element={<Cricket />} />
-            <Route path="/quantum" element={<Quantum />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
